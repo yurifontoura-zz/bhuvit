@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BasicBank.Application.Interface\BasicBank.Application.Interface.csproj" />
+    <ProjectReference Include="..\BasicBank.Application\BasicBank.Application.csproj" />
     <ProjectReference Include="..\BasicBank.Domain\BasicBank.Domain.csproj" />
     <ProjectReference Include="..\BasicBank.Repository\BasicBank.Repository.csproj" />
   </ItemGroup>

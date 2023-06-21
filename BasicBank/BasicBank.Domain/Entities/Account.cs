@@ -6,6 +6,7 @@
         protected const decimal MIN_BALANCE = 100M;
         protected const decimal MAX_WITHDRAW_PERCENT = 0.9M;
 
+        public Account() { }
         public Account(User user)
         {
             User = user;
@@ -16,7 +17,7 @@
         public decimal Balance { get; protected set; }
 
         public Guid UserID { get; set; }
-        public User User { get; set; }
+        public User? User { get; set; }
 
         /// <summary>
         /// Responsible to deposit process.

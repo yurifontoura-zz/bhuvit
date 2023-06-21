@@ -1,4 +1,6 @@
-﻿using BasicBank.Domain.Repositories;
+﻿using BasicBank.Application.Applications;
+using BasicBank.Application.Interface.Applications;
+using BasicBank.Domain.Repositories;
 using BasicBank.Repository.EF;
 using BasicBank.Repository.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +12,11 @@ namespace BasicBank.CrossDomain
     {
         public static void Configure(IServiceCollection services)
         {
+            // Apps
+            services.AddTransient<IUserApplication, UserApplication>();
+            services.AddTransient<IAccountApplication, AccountApplication>();
+
+            // Reps
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IAccountRepository, AccountRepository>();
         }
